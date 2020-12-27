@@ -1,0 +1,31 @@
+.main
+{
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-top: 0px;
+	overflow:auto;
+	-webkit-box-shadow: -21px 20px 7px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: -21px 20px 7px 0px rgba(0,0,0,0.35);
+	box-shadow: -21px 20px 7px 0px rgba(0,0,0,0.35)
+	
+}
+.copy
+{
+    width: 75%;
+}
+.imgMain{
+    float:right;
+    width: 40%;
+    height: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.textoMain
+{
+    font-size: auto;
+    margin-left: 10px;
+}
+.footer
+{
+    color: white;
+}
