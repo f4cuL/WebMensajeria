@@ -1,0 +1,30 @@
+.main
+{
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-top: 0px;
+}
+.copy
+{
+    width: 75%;
+}
+.main {
+    overflow:auto;
+}
+.imgMain{
+    float:right;
+    width: 40%;
+    height: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 600px;
+}
+.textoMain
+{
+    font-size: auto;
+    margin-left: 10px;
+}
+.footer
+{
+    color: white;
+}
