@@ -13,7 +13,7 @@
 }
 .imgMain{
     float:right;
-    width: auto;
+    width: 40%;
     height: 100%;
     padding-left: 60px;
     padding-right: 60px;
@@ -21,6 +21,10 @@
 }
 .textoMain
 {
-    font-size: 40px;
+    font-size: auto;
     margin-left: 10px;
+}
+.footer
+{
+    color: white;
 }
