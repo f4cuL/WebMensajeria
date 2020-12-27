@@ -1,5 +1,4 @@
 <?php
-    $destinatario = 'facueliaslopez@gmail.com'
     $nombre = $_POST['nombre'];
     $asunto = $_POST['asunto'];
     $mensaje = $_POST['mensaje']; 
@@ -7,6 +6,8 @@
 
     $header = "Enviado desde la pagina de conchesumare";
 
+    $destinatario = 'facueliaslopez@gmail.com'
+    
     $mensajeCompleto = $mensaje . "\nAtentamente: ". $nombre;
 
     mail($destinatario, $asunto, $mensajeCompleto, $header);
