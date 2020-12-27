@@ -39,9 +39,6 @@ public class Conexion {
     public Connection getConexion(){
         return con;
     }
-    
-    public static void main(String[] args) {
-        Conexion con = new Conexion();
-    }
+   
 }
 
