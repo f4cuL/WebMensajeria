@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
-  <link rel="styl esheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
@@ -52,13 +52,46 @@
       </div>
     </div>
   </nav>
-  <form action="enviar.php" method="post">
+  
+  <!-- <form action="enviar.php" method="post">
     <input type="text" name="nombre" id="name" class="nombre" placeholder="NOMBRE">
     <input type="text" name="email" id="subject" class="email" placeholder="EMAIL">
-    <textarea type="text" name="mensaje" placeholder="MENSAJE"></textarea>
+    <textarea type="text" name="mensaje" style="resize:none" rows="12" placeholder="Enter Text">  </textarea>
     <input type="submit" value="ENVIAR">
-  </form>
+  </form> -->
+<form action="enviar.php" method="post" class="container-sm mt-5 formulario bg-dark pb-4 formulario " onkeydown="return event.key != 'Enter';">
+  <div class="row g-3">
+    <div class="col-6">
+      <input type="text" class="form-control nombre" placeholder="Nombre" aria-label="Nombre" name="nombre" oninput="oninputFuncion(inputNombre)">
+    </div>
+    <div class="col-6">
+      <input type="text" class="form-control apellido" placeholder="Apellido" aria-label="Apellido" name="apellido" oninput="oninputFuncion(inputApellido)">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-6">
+      <label for="exampleFormControlInput1" class="form-label"></label>
+      <input type="email" class="form-control email" id="exampleFormControlInput1" placeholder="Correo Electrónico" name="email" oninput="oninputEmail()">  
+    </div>
+    <div class="col-6">
+      <label for="telefono" class="form-label"></label>
+      <input type="number" class="form-control telefono" id="telefono" placeholder="Telefono de contacto" name="telefono" oninput="oninputTelefono()">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"></label>
+    <textarea class="form-control mensaje" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios" name="mensaje" id="validationDefault01"></textarea>
+    <div class="invalid-feedback">
+      Please enter a message in the textarea.
+    </div>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-light disabled" type="submit" value="ENVIAR">Enviar</button>
+  </div>
+</form>
 
+
+<script src="main.js"></script>
 </body>
 
 </html>

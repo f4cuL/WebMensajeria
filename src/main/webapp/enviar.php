@@ -17,18 +17,19 @@
 <?php 
 $myemail = 'facueliaslopez@gmail.com';
 $name = $_POST['nombre'];
+$secondname = $_POST['apellido'];
 $email = $_POST['email'];
+$telefono = $_POST['telefono'];
 $message = $_POST['mensaje'];
 
 $subject='';
 
 $to = $myemail;
 $email_subject = "Nuevo mensaje: $subject";
-$email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n Correo: $email \n Mensaje: \n $message";
+$email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n Apellido: $secondname \n Correo: $email \n Telefono: $telefono \n Mensaje: \n $message";
 $headers = "From: $email";
 
 mail($to, $email_subject, $email_body, $headers);
-echo aler("El mensaje se ha enviado correctamente");
 ?>
 
 
@@ -70,13 +71,33 @@ echo aler("El mensaje se ha enviado correctamente");
       </div>
     </div>
   </nav>
-  <form action="enviar.php" method="post">
-    <input type="text" name="nombre" id="name" class="nombre" placeholder="NOMBRE">
-    <input type="text" name="email" id="subject" class="email" placeholder="EMAIL">
-    <textarea type="text" name="mensaje" placeholder="MENSAJE"></textarea>
-    <input type="submit" value="ENVIAR">
-  </form>
-  
+  <form action="enviar.php" method="post" class="container-sm mt-5 formulario bg-dark pb-4 formulario">
+  <div class="row g-3">
+    <div class="col-6">
+      <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" name="nombre">
+    </div>
+    <div class="col-6">
+      <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" name="apellido">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-6">
+      <label for="exampleFormControlInput1" class="form-label"></label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo Electrónico" name="email">
+    </div>
+    <div class="col-6">
+      <label for="telefono" class="form-label"></label>
+      <input type="number" class="form-control" id="telefono" placeholder="Telefono de contacto" name="telefono">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios" name="mensaje" ></textarea>
+  </div>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-light" type="submit" value="ENVIAR">Enviar</button>
+  </div>
+</form>
 </body>
 
 </html>
