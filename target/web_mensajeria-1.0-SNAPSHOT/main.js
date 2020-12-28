@@ -4,7 +4,7 @@ let inputEmail = document.querySelector(".email");
 let inputNumero = document.querySelector(".telefono");
 let boton = document.querySelector(".btn");
 
-
+// VERIFICACION DEL NOMBRE Y APELLIDO
 function oninputFuncion(input) {
     if (input.value.length > 0 && input.value.length < 20 ) {
         if(input.classList.contains("is-invalid"))
@@ -28,6 +28,7 @@ function oninputFuncion(input) {
     }
     verificarBoton()
 }
+// VERIFICACION DEL EMAIL
 function oninputEmail() {
     if (inputEmail.value.indexOf("@") != inputEmail.value.lastIndexOf("@")) {
         inputEmail.classList.replace("is-valid", "is-invalid");
@@ -53,7 +54,7 @@ function oninputEmail() {
     }
     verificarBoton()
 }
-
+// VERIFICACION DEL TELEFONO
 function oninputTelefono() {
     if (inputNumero.value.length >0 && inputNumero.value.length < 12){
         if (inputNumero.classList.contains("is-invalid"))
@@ -74,11 +75,12 @@ function oninputTelefono() {
     }
     verificarBoton()
 }
-
+// VERIFICADOR "SI HAY NUMERO"
 function hasNumber(myString) {
     return /\d/.test(myString);
 }
 
+// VERIFICAR PARA PODER ACTIVAR EL BOTON
 function verificarBoton() {
     if(inputEmail.classList.contains("is-valid") && inputNumero.classList.contains("is-valid") && inputNombre.classList.contains("is-valid") && inputApellido.classList.contains("is-valid"))
     {
@@ -92,7 +94,7 @@ function verificarBoton() {
         boton.classList.add("disabled");
     }
 }
-
+// FUNCION PARA SOLO PODER ESCRIBIR LETRAS
 function SoloLetras(e) {
     key = e.keyCode || e.which;
     tecla = String.fromCharCode(key).toString();
