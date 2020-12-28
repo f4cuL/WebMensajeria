@@ -48,4 +48,8 @@ public class Consultas extends Conexion{
     {
         return true;
     }
+    public static void main(String[] args) {
+        Consultas co = new Consultas();
+        System.out.println(co.autenticacion("facuekisde", "ericgay"));
+    }
 }

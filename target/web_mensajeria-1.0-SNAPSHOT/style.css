@@ -25,7 +25,55 @@
     font-size: auto;
     margin-left: 10px;
 }
+.formulario
+{
+    border-radius: 20px;
+}
 .footer
 {
     color: white;
+    font-size: 10px;
+}
+.textoHeader
+{
+    font-size: 12px;
+}
+.mensaje
+{
+    height: 200px;
+}
+
+textarea
+{
+    resize: none;
+    height: 300px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+body
+{
+    background-image: url('textura-fondo-gris.jpg');
+}
+header
+{
+    background-color: white;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+.asd
+{
+    background-color: white;
+    border: 1px solid #C00;
 }
