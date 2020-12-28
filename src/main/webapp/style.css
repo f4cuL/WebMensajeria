@@ -25,17 +25,23 @@
     font-size: auto;
     margin-left: 10px;
 }
+.formulario
+{
+    border-radius: 20px;
+}
 .footer
 {
     color: white;
+    font-size: 10px;
 }
 .textoHeader
 {
-    font-size: 15px;
+    font-size: 12px;
 }
-.formulario{
-
-  }
+.mensaje
+{
+    height: 200px;
+}
 
 textarea
 {
@@ -52,4 +58,22 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+body
+{
+    background-image: url('textura-fondo-gris.jpg');
+}
+header
+{
+    background-color: white;
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+.asd
+{
+    background-color: white;
+    border: 1px solid #C00;
 }

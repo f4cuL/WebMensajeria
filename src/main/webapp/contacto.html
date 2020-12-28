@@ -33,7 +33,7 @@
   </header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="cypher.png" alt="" width="50px"></a>
+      <a class="navbar-brand" href="#"><img src="moto.png" alt="" width="50px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -59,7 +59,16 @@
     <textarea type="text" name="mensaje" style="resize:none" rows="12" placeholder="Enter Text">  </textarea>
     <input type="submit" value="ENVIAR">
   </form> -->
-<form action="enviar.php" method="post" class="container-sm mt-5 formulario bg-dark pb-4 formulario " onkeydown="return event.key != 'Enter';">
+  <div class="container text-center mt-3">
+    <div class="ratio ratio-21x9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4016.505034472948!2d-58.412247305198406!3d-34.67200247072336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe1a591f3280ad8e!2sMoto%20Rudy!5e0!3m2!1ses!2sar!4v1609174826604!5m2!1ses!2sar"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+    </div>
+  </div>
+
+<form action="enviar.php" method="post" class="container-sm mt-5 mb-5 formulario bg-dark pb-4 formulario" onkeydown="return event.key != 'Enter';">
   <div class="row g-3">
     <div class="col-6">
       <input type="text" class="form-control nombre" placeholder="Nombre" aria-label="Nombre" name="nombre" oninput="oninputFuncion(inputNombre)" onkeypress="return SoloLetras(event)">
@@ -80,7 +89,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label"></label>
-    <textarea class="form-control mensaje" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios" name="mensaje" id="validationDefault01"></textarea>
+    <textarea class="form-control mensaje" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" name="mensaje" id="validationDefault01"></textarea>
     <div class="invalid-feedback">
       Please enter a message in the textarea.
     </div>
@@ -90,6 +99,11 @@
   </div>
 </form>
 
+
+
+<div class="footer fixed-bottom bg-dark">
+  Lorem ipsum dolor sit amet con
+</div>
 
 <script src="main.js"></script>
 </body>
