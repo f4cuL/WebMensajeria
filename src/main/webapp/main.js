@@ -22,6 +22,10 @@ function oninputFuncion(input) {
     else {
         input.classList.add("is-invalid");
     }
+    if (input.value.length==0)
+    {
+        input.classList.replace("is-valid","is-invalid"); 
+    }
     verificarBoton()
 }
 function oninputEmail() {
@@ -42,12 +46,16 @@ function oninputEmail() {
         else {
             inputEmail.classList.add("is-invalid");
         }
+        if (inputEmail.value.length==0)
+        {
+            inputEmail.classList.replace("is-valid","is-invalid"); 
+        }
     }
     verificarBoton()
 }
 
 function oninputTelefono() {
-    if (inputNumero.value.length > 0 && inputNumero.value.length < 12){
+    if (inputNumero.value.length >0 && inputNumero.value.length < 12){
         if (inputNumero.classList.contains("is-invalid"))
         {
             inputNumero.classList.replace("is-invalid", "is-valid");
@@ -59,6 +67,10 @@ function oninputTelefono() {
     }
     else {
         inputNumero.classList.add("is-invalid");
+    }
+    if (inputNumero.value.length==0)
+    {
+        inputNumero.classList.replace("is-valid","is-invalid"); 
     }
     verificarBoton()
 }
