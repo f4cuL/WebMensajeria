@@ -2,6 +2,7 @@ let inputNombre = document.querySelector(".nombre");
 let inputApellido = document.querySelector(".apellido");
 let inputEmail = document.querySelector(".email");
 let inputNumero = document.querySelector(".telefono");
+let boton = document.querySelector(".btn");
 
 
 function oninputFuncion(input) {
@@ -21,6 +22,7 @@ function oninputFuncion(input) {
     else {
         input.classList.add("is-invalid");
     }
+    verificarBoton()
 }
 function oninputEmail() {
     if (inputEmail.value.indexOf("@") != inputEmail.value.lastIndexOf("@")) {
@@ -34,13 +36,14 @@ function oninputEmail() {
             }
             else
             {
-                inputEmail.classList.replace("is-valid");
+                inputEmail.classList.add("is-valid");
             }
         }
         else {
             inputEmail.classList.add("is-invalid");
         }
     }
+    verificarBoton()
 }
 
 function oninputTelefono() {
@@ -48,17 +51,16 @@ function oninputTelefono() {
         if (inputNumero.classList.contains("is-invalid"))
         {
             inputNumero.classList.replace("is-invalid", "is-valid");
-            verificarBoton()
         }
         else
         {
             inputNumero.classList.add("is-valid");
-            verificarBoton()
         }
     }
     else {
         inputNumero.classList.add("is-invalid");
     }
+    verificarBoton()
 }
 
 function hasNumber(myString) {
@@ -66,5 +68,15 @@ function hasNumber(myString) {
 }
 
 function verificarBoton() {
-
+    if(inputEmail.classList.contains("is-valid") && inputNumero.classList.contains("is-valid") && inputNombre.classList.contains("is-valid") && inputApellido.classList.contains("is-valid"))
+    {
+        console.log("Son validos");
+        boton.classList.remove("disabled");
+        
+    }
+    else
+    {
+        console.log("Uno o ambos es invalido");
+        boton.classList.add("disabled");
+    }
 }
