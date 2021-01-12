@@ -36,34 +36,32 @@ mail($to, $email_subject, $email_body, $headers);
 
 
 <header class="sticky-top">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-4 text-center">
-          <p class="m-0 pt-1 textoHeader fw-bold"><img src="iconos/cellphone.png" alt="" width="20px" class>1169478162
-          </p>
-        </div>
-        <div class="col-sm-4 text-center">
-          <p class="m-0 pt-1 pb-1 textoHeader fw-bold"><img src="iconos/ubicacion.png" alt="" width="20px">E De San
-            Martin 3224, Valentin Alsina,
-            Buenos Aires, Argentina</p>
-        </div>
-        <div class="col-sm-4 text-center">
-          <p class="m-0 pt-1 pb-1 textoHeader fw-bold"><img src="iconos/correo.png" alt="" width="20px">
-            belozojuan@gmail.com</p>
-        </div>
-
+  <div class=" container-fluid">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <a href="tel:+541169478162" style="color: inherit; text-decoration: none;"> <p class="m-0 pt-1 textoHeader fw-bold"><img src="iconos/cellphone.png" alt="" width="20px" class>1169478162</p></a>
       </div>
+      <div class="col-sm-4 text-center">
+        <a href="contacto.html" style="color: inherit; text-decoration: none;">
+        <p class="m-0 pt-1 pb-1 textoHeader fw-bold"><img src="iconos/ubicacion.png" alt="" width="20px">E De San Martin
+          3224, Valentin Alsina,
+          Buenos Aires, Argentina</p>
+        </a>
+      </div>
+      <div class="col-sm-4 text-center">
+        <a href="mailto:belozojuan@gmail.com" style="color: inherit; text-decoration: none;">
+        <p class="m-0 pt-1 pb-1 textoHeader fw-bold"><img src="iconos/correo.png" alt="" width="20px">
+          belozojuan@gmail.com</p>
+        </a>
+      </div>
+  
+    </div>
     </div>
   </header>
-  <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">¡Excelente!</h4>
-  <p>El mensaje ha sido enviado con exito</p>
-  <hr>
-  <p class="mb-0">Te responderemos a la brevedad, muchas gracias.</p>
-</div>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="logo.png" alt="" width="50px"></a>
+      <a class="navbar-brand" href="index.html"><img src="imagenes/logo.png" alt="" width="50px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -127,8 +125,7 @@ mail($to, $email_subject, $email_body, $headers);
     <p class="text-center m-0" style="font-weight: bold; font-size: 15px;"> © 2021 - MOTOSRUDY </p>
   </div>
 
-
-<script src="main.js"></script>
+  <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
