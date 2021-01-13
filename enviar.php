@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Start Page</title>
+  <title>Moto rudy - ¡Mensajeria de confianza!</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,26 +12,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="icon" href="moto.png">
+  <link rel="icon" href="imagenes/logo.png">
 </head>
 
 <body>
-<?php 
-$myemail = 'facueliaslopez@gmail.com';
-$name = $_POST['nombre'];
-$secondname = $_POST['apellido'];
-$email = $_POST['email'];
-$telefono = $_POST['telefono'];
-$message = $_POST['mensaje'];
 
-$subject='';
-
-$to = $myemail;
-$email_subject = "Nuevo mensaje: $subject";
-$email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n Apellido: $secondname \n Correo: $email \n Telefono: $telefono \n Mensaje: \n $message";
-$headers = "From: $email";
-
-mail($to, $email_subject, $email_body, $headers);
+<?php
+if(isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_POST["mensaje"]) ){
+$to = "CUENTA_DESTINO@DOMINIO.COM";
+$subject = "Mensaje Enviado";
+$contenido .= "Nombre: ".$_POST["nombre"]."\n";
+$contenido .= "Email: ".$_POST["email"]."\n\n";
+$contenido .= "Mensaje: ".$_POST["mensaje"]."\n\n";
+$header = "From: no-reply@c2090818.ferozo.com\nReply-To:".$_POST["email"]."\n";
+if(mail($to, $subject, $contenido ,$header)){
+echo "Mail Enviado.";
+}
+}
 ?>
 
 
@@ -58,7 +55,12 @@ mail($to, $email_subject, $email_body, $headers);
     </div>
     </div>
   </header>
-
+  <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">¡Excelente!</h4>
+  <p>Su mensaje ha sido enviado con éxito</p>
+  <hr>
+  <p class="mb-0">Le responderemos a la brevedad, ¡Muchas gracias!.</p>
+</div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="imagenes/logo.png" alt="" width="50px"></a>
@@ -122,7 +124,7 @@ mail($to, $email_subject, $email_body, $headers);
 </form>
 
 <div class="footer fixed-bottom bg-dark m-0">
-    <p class="text-center m-0" style="font-weight: bold; font-size: 15px;"> © 2021 - MOTOSRUDY </p>
+    <p class="text-center m-0" style="font-weight: bold; font-size: 15px;"> © 2021 - MOTORUDY SINCE 1996 </p>
   </div>
 
   <script src="main.js"></script>
